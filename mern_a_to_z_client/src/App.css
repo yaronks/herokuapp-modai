@@ -32,6 +32,9 @@
   }
 }
 
+.survey-div{
+  background-image: url(./bg.jpg);
+}
 .CreateBook {
   background-color: #2c3e50;
   min-height: 100vh;
@@ -69,11 +72,60 @@
 }
 
 .card-container {
-  width: 250px;
-  border: 1px solid rgba(0, 0, 0.125);
-  margin: 0 auto;
-  border-radius: 5px;
-  overflow: hidden;
+  margin-left: 200px;
+  padding: 50px;
+  background-color: rgba(65, 72, 62, 0.396);
+  background: oldlace;
+  width: 700px;
+  height: 390px;
+  outline: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border:2px solid #000;
+}
+
+.checks-container {
+  align-items: stretch;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  justify-content: space-evenly;
+  
+}
+
+.button-container {
+  padding-top: 50px;
+  align-items: bottom;
+  flex-direction: row;
+  pad: 5px;
+}
+
+.card-text {
+  text-align: center;
+  font-family: serif;
+  font-size: 23px;
+  line-height: 2;
+  font-weight: bolder;
+}
+
+.align-right {
+  flex-grow: 1;
+  align-items: right;
+  text-align: right;
+  border: 10;
+}
+
+.flex-end {
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.align-left {
+  align-items: left;
+  text-align: left;
+  border: 10;
 }
 
 .desc {
@@ -95,4 +147,22 @@ p {
   color: #6c757d;
   font-size: 1em;
   padding: 10px 0 10px 0;
+}
+
+.next-button {
+  justify-content: end;
+  right:300px;
+  float: right; 
+  height: 7vh;
+  width: 125px;
+  align-items: right;
+  text-align: right;
+}
+
+.prev-button {
+  align-items: left;
+  text-align: left;
+  float: left; 
+  height: 7vh;
+  width: 125px;
 }

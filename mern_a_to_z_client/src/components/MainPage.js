@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import BookCard from './BookCard';
 
-function ShowBookList() {
+function MainPage() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -14,14 +13,9 @@ function ShowBookList() {
         setBooks(res.data);
       })
       .catch((err) => {
-        console.log('Error from ShowBookList');
+        console.log('Error');
       });
   }, []);
-
-  const bookList =
-    books.length === 0
-      ? 'there is no book record!'
-      : books.map((book, k) => <BookCard book={book} key={k} />);
 
   return (
     <div className='ShowBookList'>
@@ -29,15 +23,15 @@ function ShowBookList() {
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center'>Books List</h2>
+            <h2 className='display-4 text-center'>First Page</h2>
           </div>
 
           <div className='col-md-11'>
             <Link
-              to='/create-book'
+              to='/initial-survey'
               className='btn btn-outline-warning float-right'
             >
-              + Add New Book
+              Initial Survey
             </Link>
             <br />
             <br />
@@ -45,10 +39,10 @@ function ShowBookList() {
           </div>
         </div>
 
-        <div className='list'>{bookList}</div>
+        <div className='list'></div>
       </div>
     </div>
   );
 }
 
-export default ShowBookList;
+export default MainPage;
