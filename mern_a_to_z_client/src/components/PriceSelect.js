@@ -11,6 +11,7 @@ const PriceSelect = ({ prevStep, nextStep, handleChange, values, variable }) => 
     e.preventDefault();
     nextStep();
   }
+  
   const Previous = e => {
     e.preventDefault();
     prevStep();

@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import UserDetails from './UserDetails'
 import FashionGoals from './FashionGoals'
 import PriceSelect from './PriceSelect'
-
+import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
+import NavBarMain from './NavBarMain';
 
 export default class InitialSurvey extends Component {
 
@@ -138,8 +140,16 @@ export default class InitialSurvey extends Component {
           )
       case 7: 
           return (
-            <div className="survey-div" style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-            <h1> That's it for now </h1>
+            <div>
+              <NavBarMain> </NavBarMain>
+            
+            <div className="survey-div" style={{textAlign:'center', justifyContent:'center', flexDirection: 'row', alignItems:'center', height:10000}}>
+            
+            <div style={{padding:'200px'}}> 
+            <h1> Thank You! </h1>
+            <h2> Now that we know a bit more about you, we can start your fashion journey! </h2>
+              </div>
+            </div>
             </div>
           )
       default: 

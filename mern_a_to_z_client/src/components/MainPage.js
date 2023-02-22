@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import axios from 'axios';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import NavBarMain from './NavBarMain';
 
 function MainPage() {
   const [books, setBooks] = useState([]);
@@ -18,29 +22,16 @@ function MainPage() {
   }, []);
 
   return (
-    <div className='ShowBookList'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-12'>
+    <div className='MainPage'>
+      <NavBarMain/> 
             <br />
-            <h2 className='display-4 text-center'>First Page</h2>
-          </div>
-
-          <div className='col-md-11'>
-            <Link
-              to='/initial-survey'
-              className='btn btn-outline-warning float-right'
-            >
-              Initial Survey
-            </Link>
+            <h2 className='heading-text'>Modai</h2>
+            <br />
+            <h3 className='subheading-text'>Your Fashion Journey Begins Today</h3>
             <br />
             <br />
-            <hr />
-          </div>
-        </div>
-
-        <div className='list'></div>
-      </div>
+            <div className='link'> 
+            </div>
     </div>
   );
 }
