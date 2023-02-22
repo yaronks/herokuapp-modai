@@ -1,1 +1,1 @@
-web: npm start
+web: cd mern_a_z_client npm start
