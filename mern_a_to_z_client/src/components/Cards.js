@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import tileData from './tileData';
 import Stars from './Ratings';
+import ButtonSet from './ButtonSet';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,9 +50,7 @@ export default function SingleLineGridList() {
             <GridListTileBar
               title={tile.title}
               actionIcon={
-                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
-                  <FavoriteIcon />
-                </IconButton>
+                <ButtonSet> </ButtonSet>
               }
             />
           </GridListTile>
@@ -66,12 +65,12 @@ export default function SingleLineGridList() {
             <GridListTileBar
               title={tile.title}
               actionIcon={
-                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
-                  <FavoriteIcon />
-                </IconButton>
+                <ButtonSet> </ButtonSet>
               }
             />
+            
           </GridListTile>
+         
         ))}
       </GridList>
 
