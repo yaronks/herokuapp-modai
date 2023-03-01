@@ -4,30 +4,31 @@ import bottomData from './bottomData';
 import topData from './topData';
 
 export default function GenerateOutfitButton() {
-    const [toggle, setToggle] = useState(false);
+	const [count, setCount] = useState(-1);
 	return (
-        !toggle? 
+		<div>
 			<Button
 				variant='outlined'
 				style={{ backgroundColor: 'white' }}
-                title='Generate Outfit'
-                onClick={() => setToggle(true)}
-            >Generate Outfit</Button>
-            :
-            <div>{topData.map((tile, index) => (
-                index % 3 == 0?
-                <div>
-                  <div key={tile.img}> 
-                    <img src={tile.img} alt={tile.title} />            
-                  </div>
-                  <div key={bottomData[index].img}> 
-                    <img src={bottomData[index].img} alt={bottomData[index].title} />            
-                  </div>
-                </div>
-                :
-                <br/>
-              ))
-            }</div>
-
+				title='Generate Outfit'
+				onClick={() => setCount(count+1)}
+			>
+				Generate Outfit
+			</Button>
+			{(count == -1  || count > 10) ? <br/>:
+			<div>
+				{<div>
+							<div key={topData[count].img}>
+								<img src={topData[count].img} alt={topData[count].title} />
+							</div>
+							<div key={bottomData[count].img}>
+								<img
+									src={bottomData[count].img}
+									alt={bottomData[count].title}
+								/>
+							</div>
+						</div>}
+			</div>}
+		</div>
 	);
 }
