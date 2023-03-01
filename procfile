@@ -1,0 +1,4 @@
+
+web: cd mern_a_to_z_client
+npm start
+
