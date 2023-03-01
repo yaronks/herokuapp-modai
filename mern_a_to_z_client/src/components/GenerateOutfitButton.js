@@ -11,11 +11,11 @@ export default function GenerateOutfitButton() {
 				variant='outlined'
 				style={{ backgroundColor: 'white' }}
 				title='Generate Outfit'
-				onClick={() => setCount(count+1)}
+				onClick={() => setCount((count+1)%6)}
 			>
 				Generate Outfit
 			</Button>
-			{(count == -1  || count > 10) ? <br/>:
+			{(count == -1  || count > 6) ? <br/>:
 			<div>
 				{<div>
 							<div key={topData[count].img}>
